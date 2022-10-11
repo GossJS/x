@@ -1,4 +1,4 @@
-const [{ Server: h1 }, x] = [require('http'), require('express')];
+const [{ Server: h1 }, x] = [require('node:http'), require('express')];
 
 const Router = x.Router();
 const PORT = 4321;
@@ -17,14 +17,14 @@ app
   /* .set('view engine', 'pug') */
   .set('x-powered-by', false);
 module.exports = h1(app)
-  .listen(process.env.PORT || PORT, () => log(process.pid));
+  .listen(process.env.PORT ?? PORT, () => log(process.pid));
 
 
 /*
 
 для варианта с type="module"
 
-import { Server } from 'http';
+import { Server } from 'node:http';
 import x from 'express';
 
 и в предпоследней строке
