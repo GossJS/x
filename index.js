@@ -32,3 +32,18 @@ import x from 'express';
 export default Server(app)
 
 */
+
+
+
+/*
+
+для доступа без npm
+
+wget kodaktor.ru/express/x.zip && unzip x.zip && cd express/
+
+и далее 
+
+import x from './lib/express.js';
+
+
+*/
